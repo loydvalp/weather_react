@@ -90,7 +90,7 @@ export default function Weather() {
         <p>
           <small>
             <div>
-              <a href="https://github.com/loydvalp/My_Weather_App_Project.git">
+              <a href="https://github.com/loydvalp/weather_react.git">
                 Open Source Coding
               </a>
             </div>

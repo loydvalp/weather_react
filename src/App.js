@@ -2,10 +2,14 @@ import React from "react";
 import Weather from "./Weather";
 import "./App.css";
 
-export default function App() {
+function App() {
   return (
     <div className="App">
-      <Weather />
+      <header className="App-header">
+        <Weather />
+      </header>
     </div>
   );
 }
+
+export default App;

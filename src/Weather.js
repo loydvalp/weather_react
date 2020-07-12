@@ -84,15 +84,13 @@ export default function Weather() {
           </div>
         </div>
       </div>
-      <div class="row weather-forecast" id="forecast" />
-      <div class="author">
+      <div className="row weather-forecast" id="forecast" />
+      <div className="author">
         <p>
           <small>
-            <div>
-              <a href="https://github.com/loydvalp/weather_react.git">
-                Open Source Coding
-              </a>
-            </div>
+            <a href="https://github.com/loydvalp/weather_react.git">
+              Open Source Coding
+            </a>
             <strong>by Valencia Loyd</strong>
           </small>
         </p>

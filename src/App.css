@@ -47,3 +47,10 @@ h1 {
 #fahrenheit {
   color: rgba(26, 24, 24, 0.89);
 }
+
+.Weather {
+  padding: 50px;
+  border: 1px solid rgb(52, 108, 165);
+  border-radius: 5px;
+  background-color: rgb(52, 108, 165);
+}

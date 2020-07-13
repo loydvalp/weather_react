@@ -5,9 +5,16 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="container">
         <Weather />
-      </header>
+      </div>
+
+      <footer>
+        This project was coded by{" "}
+        <a href="https://github.com/loydvalp/weather_react.git" target="_blank">
+          Valencia Loyd{" "}
+        </a>
+      </footer>
     </div>
   );
 }

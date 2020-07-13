@@ -85,7 +85,6 @@ export default function Weather() {
         </div>
       </div>
       <div className="row weather-forecast" id="forecast" />
-      <div className="author"></div>
     </div>
   );
 }

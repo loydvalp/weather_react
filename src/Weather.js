@@ -102,7 +102,7 @@ export default function Weather(props) {
           </div>
           <div className="col-sm-6">
             <span className="weatherIcon">
-              <img src={weatherData.imgUrl} className="card-img-top" alt="" />
+              <img src={weatherData.imgUrl} className="card-img-top" alt="" /> 
             </span>
           </div>
         </div>

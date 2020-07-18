@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 //import WeatherInfo from "./WeatherInfo";
-import Forecast from "./Forecast";
+//import Forecast from "./Forecast";
 import axios from "axios";
 import "./Weather.css";
 
@@ -20,7 +20,7 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
          });
-  }
+      }
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -37,7 +37,7 @@ export default function Weather(props) {
     axios.get(apiUrl).then(showTemperature);
   }
 
-  if (weatherData.ready){
+  if (weatherData.ready) {
   return (
     <div className="Weather">
       <h1>How's the Weather?</h1>
@@ -108,7 +108,12 @@ export default function Weather(props) {
           </div>
         </div>
       </div>
-      <div className="row weather-forecast" id="forecast" />
+
+      <div className="row Forecast" id="forecast">
     </div>
-  );
-}
+    );
+  } else{
+    search();
+    return "Loading...";
+   }
+ }

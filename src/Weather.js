@@ -64,7 +64,6 @@ export default function Weather(props) {
           </div>
         </div>
       </div>
-
       <div className="today">
         <div className="row">
           <div className="col-sm-6">
@@ -113,7 +112,7 @@ export default function Weather(props) {
     </div>
     );
   } else{
-    search();
+    search();  //need to refactor code and move forecast and today info 
     return "Loading...";
    }
  }

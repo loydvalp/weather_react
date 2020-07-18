@@ -1,19 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+//import WeatherInfo from "./WeatherInfo";
+import Forecast from "./Forecast";
+import axios from "axios";
 import "./Weather.css";
 
-export default function Weather() {
-  let weatherData = {
-    city: "Houston",
-    date: "Friday -07/03",
-    time: "12:00",
-    Temperature: "32",
-    description: "Cloudy",
-    imgUrl: "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png",
-    gitUrl: "https://github.com/loydvalp/My_Weather_App_Project.git",
-    feels: "Feels like 36ºC",
-    humidity: "Humidity: 58% ",
-    wind: "Wind: 2 m/s",
-  };
+export default function Weather(props) {
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
+
+  function showTemperature(response) {
+    setWeatherData({
+      ready: true,
+      city: response.data.name,
+      //date:
+      date: new Date(response.data.dt * 1000),
+      temperature: Math.round(response.data.main.temp),
+      description: response.data.weather[0].description,
+      feels: Math.round(response.data.main.feels_like),
+      humidity: response.data.main.humidity,
+      wind: Math.round(response.data.wind.speed),
+         });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    searchCity();
+  }
+
+  function handleCity(event) {
+    setCity(event.target.value);
+  }
+
+  function searchCity(event) {
+    const apiKey = "84bf783b0426ae0eabcc200e14cbdb41";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    axios.get(apiUrl).then(showTemperature);
+  }
+
+  if (weatherData.ready){
   return (
     <div className="Weather">
       <h1>How's the Weather?</h1>

@@ -1,7 +1,7 @@
 import React from "react";
 import FormattedTime from "./FormattedTime";
 import WeatherIcon from "./WeatherIcon";
-//import WeatherTemperature from "./WeatherTemp";
+import WeatherTemp from "./WeatherTemp";
 
 export default function WeatherInfo(props) {
   return (
@@ -19,7 +19,7 @@ export default function WeatherInfo(props) {
                   <p className="card-text">
                     Today| <FormattedTime date={props.data.date} /> <br />
                     <span className="tempNow">
-                      {props.data.Temperature}
+                      <WeatherTemp celsius={props.data.Temp} />
                       <a href="/">°C</a> |<a href="/">°F</a>
                     </span>
                     <br />

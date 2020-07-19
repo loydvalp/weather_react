@@ -17,14 +17,10 @@ export default function WeatherInfo(props) {
                     <span>{props.data.city}</span>
                   </h5>
                   <p className="card-text">
-                    Today|{" "}
-                    <span>
-                      <FormattedTime date={props.data.date} />{" "}
-                    </span>
-                    <br />
+                    Today| <FormattedTime date={props.data.date} /> <br />
                     <span> {props.data.time} </span> <br />
                     <span className="tempNow">
-                      <span>{props.data.Temperature}</span>
+                      {props.data.Temperature}
                       <a href="/">°C</a> |<a href="/">°F</a>
                     </span>
                     <br />
@@ -34,7 +30,7 @@ export default function WeatherInfo(props) {
                     <br />
                     <span>{props.data.feels} </span> <br />
                     <span>{props.data.humidity} </span> <br />
-                    <span>{props.data.wind} </span>
+                    {props.data.wind}
                   </p>
                 </div>
               </div>

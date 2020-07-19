@@ -18,7 +18,6 @@ export default function WeatherInfo(props) {
                   </h5>
                   <p className="card-text">
                     Today| <FormattedTime date={props.data.date} /> <br />
-                    <span> {props.data.time} </span> <br />
                     <span className="tempNow">
                       {props.data.Temperature}
                       <a href="/">°C</a> |<a href="/">°F</a>
@@ -28,9 +27,10 @@ export default function WeatherInfo(props) {
                     <br />
                     <br />
                     <br />
-                    <span>{props.data.feels} </span> <br />
-                    <span>{props.data.humidity} </span> <br />
-                    {props.data.wind}
+                    Feels like {props.data.feels}ºC
+                    <br />
+                    Humidity: {props.data.humidity}%<br />
+                    Wind: {props.data.wind} m/s
                   </p>
                 </div>
               </div>
@@ -43,7 +43,6 @@ export default function WeatherInfo(props) {
           </div>
         </div>
       </div>
-      <div className="row Forecast" id="forecast"></div>
     </div>
   );
 }

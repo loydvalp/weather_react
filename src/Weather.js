@@ -3,6 +3,7 @@ import WeatherInfo from "./WeatherInfo";
 import Forecast from "./Forecast";
 import axios from "axios";
 import "./Weather.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -18,6 +19,7 @@ export default function Weather(props) {
       feels: Math.round(response.data.main.feels_like),
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
+      icon: response.data.weather[0].icon,
     });
   }
 
@@ -34,6 +36,19 @@ export default function Weather(props) {
     const apiKey = "84bf783b0426ae0eabcc200e14cbdb41";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     axios.get(apiUrl).then(showTemperature);
+  }
+
+  function retrieveLocation(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    const apiKey = "84bf783b0426ae0eabcc200e14cbdb41";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+    axios.get(apiUrl).then(showTemperature);
+  }
+
+  function CurrentCity(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(retrieveLocation);
   }
 
   if (weatherData.ready) {
@@ -56,7 +71,7 @@ export default function Weather(props) {
                     <button className="btn btn-default" type="submit">
                       <i className="fas fa-search" />
                     </button>
-                    <button className="btn btn-default">
+                    <button className="btn btn-default" onClick={CurrentCity}>
                       <i className="fas fa-location-arrow" />
                     </button>
                   </div>

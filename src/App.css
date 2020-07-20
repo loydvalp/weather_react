@@ -1,6 +1,6 @@
 .App {
   margin: 30px auto;
-  max-width: 800px;
+  max-width: 650px;
 }
 
 .App footer {
@@ -39,4 +39,10 @@
 
 #fahrenheit {
   color: rgba(26, 24, 24, 0.89);
+}
+
+#WeatherIcon {
+  display: block;
+  max-width: 400px;
+  margin: 0 auto;
 }

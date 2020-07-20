@@ -1,5 +1,5 @@
 .Weather {
-  padding: 50px;
+  padding: 40px;
   border: 1px solid rgb(52, 108, 165);
   border-radius: 5px;
   background-color: rgb(52, 108, 165);
@@ -20,43 +20,8 @@ h5 {
 }
 
 .Weather .todayWeather {
-  margin: 50px;
+  margin: 50px 0px 50px 0px;
+  padding: 0px auto;
   border: 2px solid;
   color: rgb(52, 108, 165);
-}
-
-.Weather .outsideNow {
-  display: block;
-  margin: 25px;
-}
-
-.Weather .weather-forecast {
-  margin-top: 10px;
-}
-
-.Weather .weather-forecast h3 {
-  color: rgb(188, 197, 207);
-  font-size: 20px;
-  font-weight: 400;
-  text-align: center;
-  height: 15px;
-  line-height: 15px;
-  padding-top: 7px;
-}
-
-.Weather .weather-forecast img {
-  display: block;
-  margin: 0 auto;
-  height: 50px;
-  width: 50px;
-}
-
-.Weather .weather-forecast-temperature {
-  text-align: center;
-  color: rgb(135, 135, 135);
-  font-size: 15px;
-  font-weight: 400;
-  height: auto;
-  line-height: 15px;
-  white-space: nowrap;
 }

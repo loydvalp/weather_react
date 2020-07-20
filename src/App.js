@@ -11,11 +11,11 @@ export default function App() {
 
       <footer>
         This project was coded by Valencia Loyd and is{" "}
-        <a href="https://github.com/loydvalp/weather_react.git" target="_blank">
+        <a href="https://github.com/loydvalp/weather_react.git">
           open-sourced on GitHub
         </a>{" "}
         and{" "}
-        <a href="https://stoic-hermann-b0a640.netlify.app/" target="_blank">
+        <a href="https://stoic-hermann-b0a640.netlify.app/">
           hosted on Netlify
         </a>
       </footer>

@@ -14,7 +14,7 @@ export default function WeatherInfo(props) {
                 <div className="card-body">
                   <h5 className="card-title">
                     <i className="fas fa-map-pin" />
-                    <span>{props.data.city}</span>
+                    {props.data.city}
                   </h5>
                   <p className="card-text">
                     Today <FormattedTime date={props.data.date} />

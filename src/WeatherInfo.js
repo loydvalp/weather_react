@@ -18,7 +18,7 @@ export default function WeatherInfo(props) {
                   </h5>
                   <p className="card-text">
                     Today <FormattedTime date={props.data.date} /> <br />
-                    <WeatherTemperature celsius={props.data.Temperature} />
+                    <WeatherTemperature celsius={props.data.temperature} />
                     <br />
                     {props.data.description}
                     <br />

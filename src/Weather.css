@@ -25,3 +25,13 @@ h5 {
   border: 2px solid;
   color: rgb(52, 108, 165);
 }
+
+.Weather h3 {
+  font-size: 40px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.Weather h5 {
+  font-size: 30px;
+}

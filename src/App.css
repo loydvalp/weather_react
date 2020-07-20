@@ -46,3 +46,14 @@
   max-width: 400px;
   margin: 0 auto;
 }
+
+.container {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  padding: 25px;
+  border: 5px solid rgb(32, 32, 33, 0.6);
+}

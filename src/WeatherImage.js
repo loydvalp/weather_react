@@ -1,9 +1,11 @@
 import React from "react";
+import "./WeatherImage.css";
+import WeatherPic from "./image/WeatherPic.png";
 
 function WeatherImage() {
   return (
     <div className="WeatherIcon">
-      <img src={require("./image/Untitled.png")} alt="Weather" />
+      <img src={WeatherPic} alt="Weather" width={275} />
     </div>
   );
 }

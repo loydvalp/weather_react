@@ -19,13 +19,15 @@ export default function WeatherInfo(props) {
                   <p className="card-text">
                     Today <FormattedTime date={props.data.date} />
                     <WeatherTemperature celsius={props.data.temperature} />
-                    {props.data.description}
+                    <div className="text-capitalize">
+                      {props.data.description}
+                    </div>
                     <br />
                     <br />
                     <br />
-                    Feels like {props.data.feels}ºC
+                    Feels like {props.data.feels} ºC
                     <br />
-                    Humidity: {props.data.humidity}%<br />
+                    Humidity: {props.data.humidity} %<br />
                     Wind: {props.data.wind} m/s
                   </p>
                 </div>

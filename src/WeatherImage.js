@@ -1,5 +1,4 @@
 import React from "react";
-import "./WeatherImage.css";
 import WeatherPic from "./image/WeatherPic.png";
 
 function WeatherImage() {
